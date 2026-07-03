@@ -6,14 +6,12 @@ from utils.logger import logging
 
 def update_stock_DB(page, stock_info):
 
-    change = price_info["change"]
-    upanddown = price_info["cr"]
+    change = stock_info["change"]
+    upanddown = stock_info["cr"]
     # 하락이면 음수로 변경
-    if price_info["rf"] == "5":
+    if stock_info["rf"] == "5":
         change = -change
         upanddown = -upanddown
-
-    countOfListedStock = price_info["countOfListedStock"]
     
     stock_info_mod = {
         "현재가_깃허브_원본": {
