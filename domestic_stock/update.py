@@ -2,6 +2,7 @@
 
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 from data.domestic_stock import get_naver_prop, get_yfinance_prop
+from utils.logger import 
 
 def update_stock_DB(page, stock_info):
 
