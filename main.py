@@ -4,6 +4,7 @@
 
 # 그냥 필요한 함수들을 순서대로 실행하는 파일이다.
 
+from config import NOTION_TOKEN, NOTION_PRICE_DB_ID, NOTION_TRADE_DB_ID
 from trade_reader import read_trade_db
 from fifo import group_by_ticker, process_fifo
 from notion_updater import update_trade_page
