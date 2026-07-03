@@ -6,6 +6,6 @@ from data.domestic_stock import get_naver_prop, get_yfinance_prop
 
 def update_stock_DB(page, stock_info):
     notion.pages.update(
-        page_id=page["NOTION_PRICE_DB_ID"],
+        page_id=page[NOTION_PRICE_DB_ID],
         properties=stock_info
     )
