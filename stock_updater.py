@@ -1,10 +1,7 @@
-from notion_client import Client
-import yfinance as yf
-import os
+
 from datetime import datetime
 from zoneinfo import ZoneInfo
-import requests
-
+from 
 
 
 
@@ -62,6 +59,7 @@ def update_stock_prices():
             sector = info.get("sector")
             industry = info.get("industry")
 
+            
             update_time = datetime.now(
                 ZoneInfo("Asia/Seoul")
             ).strftime("%Y-%m-%d %H:%M")
