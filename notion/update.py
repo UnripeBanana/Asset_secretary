@@ -1,5 +1,6 @@
 # 노션에 쓰는 함수만 넣는다.
 
+from config import NOTION_TOKEN 
 from notion_client import Client
 import os
 
