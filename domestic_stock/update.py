@@ -34,7 +34,7 @@ def update_stock_DB(page, stock_info):
         "52주 최저가": {
             "number": stock_info["low_52"]
         },
-        "통화": rich_text(stock_info["currency""]),
+        "통화": rich_text(stock_info["currency"]),
         "국가": rich_text(stock_info["country"]),
         "업종": rich_text(stock_info["sector"]),
         "산업": rich_text(stock_info["industry"]),
