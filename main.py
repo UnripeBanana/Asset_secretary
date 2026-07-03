@@ -1,3 +1,9 @@
+# 프로젝트의 시작점.
+
+# 아무 계산도 하지 않는다.
+
+# 그냥 필요한 함수들을 순서대로 실행하는 파일이다.
+
 from trade_reader import read_trade_db
 from fifo import group_by_ticker, process_fifo
 from notion_updater import update_trade_page
