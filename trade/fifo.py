@@ -1,3 +1,4 @@
+from config import NOTION_TOKEN
 from collections import defaultdict, deque
 
 
