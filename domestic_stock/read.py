@@ -1,10 +1,16 @@
 from config import NOTION_PRICE_DB_ID
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 from notion.get_all_pages import get_all_pages()
-from data.domestic_stock import get_naver_prop, get_yfinance_prop
 
+def get_ticker(page):
+    ticker_data = page["properties"]["티커"]["rich_text"]
 
-def read_domestic_stock_prices():
+    if not ticker_data:
+        return None
+
+    return ticker_data[0]["plain_text"]
+
+def get_ticker():
 
     # 데이터베이스 조회
     for page in get_all_pages(DATABASE_ID):
