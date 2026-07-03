@@ -1,6 +1,7 @@
 from config import NOTION_PRICE_DB_ID
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 from notion.get_all_pages import get_all_pages()
+from data.domestic_stock import 
 
 def read_domestic_stock_prices():
 
