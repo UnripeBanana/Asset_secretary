@@ -1,3 +1,6 @@
+from utils.config import NOTION_PRICE_DB_ID
+
+"""
 # 프로젝트의 시작점.
 
 # 아무 계산도 하지 않는다.
@@ -78,3 +81,4 @@ print("\n현재가 업데이트 시작...\n")
 update_stock_prices()
 
 print("\n모든 업데이트 완료!")
+"""
