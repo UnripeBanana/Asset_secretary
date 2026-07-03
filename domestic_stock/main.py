@@ -5,4 +5,4 @@ from domestic_stock.read import get_ticker
 
 for page in get_all_pages(NOTION_PRICE_DB_ID):
 
-  ticker = get_ticker()
+  ticker = get_ticker(page)
