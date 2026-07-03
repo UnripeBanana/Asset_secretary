@@ -1,33 +1,11 @@
-from config import NOTION_
+from config import NOTION_PRICE_DB_ID
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 
-def get_all_pages(database_id):
-    pages = []
-    cursor = None
 
-    while True:
-        if cursor:
-            response = notion.databases.query(
-                database_id=database_id,
-                start_cursor=cursor
-            )
-        else:
-            response = notion.databases.query(
-                database_id=database_id
-            )
-
-        pages.extend(response["results"])
-
-        if not response["has_more"]:
-            break
-
-        cursor = response["next_cursor"]
-
-    return pages
 
 #########################
 
-def update_stock_prices():
+def read_domestic_stock_prices():
 
     # 데이터베이스 조회
     for page in get_all_pages(DATABASE_ID):
@@ -103,10 +81,11 @@ def update_stock_prices():
                 "마지막 업데이트": rich_text(update_time)
             }
 
-            notion.pages.update(
-                page_id=page["id"],
-                properties=properties
-            )
+            return properties
+           # notion.pages.update(
+         #       page_id=page["id"],
+           #     properties=properties
+          #  )
 
         except Exception as e:
             print(f"❌ {ticker} 오류: {e}")
