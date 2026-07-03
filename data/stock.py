@@ -1,6 +1,6 @@
 # 주가를 가져오는 함수만 포함시키기
 
-from config import NOTION_TOKEN
+from config import NOTION_TOKEN, NOTION_PRICE_DB_ID, NOTION_TRADE_DB_ID
 
 def get_naver_price(code):
 
