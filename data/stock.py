@@ -100,11 +100,7 @@ def update_stock_prices():
             "산업": rich_text(industry),
             "마지막 업데이트": rich_text(logger())  # 업데이트 시간 기록
         }
-
-        notion.pages.update(
-            page_id=page["id"],
-            properties=properties
-        )
+        return properties
 
     except Exception as e:
         print(f"❌ {ticker} 오류: {e}")
