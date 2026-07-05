@@ -1,12 +1,12 @@
 from config import NOTION_DB
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 import os
+from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
+from notion.rich_text import rich_text
+from data.domestic_stock import get_naver_prop, get_yfinance_prop
+from utils.logger import logging
 
-NOTION_TOKEN = os.environ["NOTION_TOKEN"]
 TRADE_DB_ID = os.environ["NOTION_TRADE_DB_ID"]
-
-notion = Client(auth=NOTION_TOKEN)
-
 
 def read_trade_db():
 
