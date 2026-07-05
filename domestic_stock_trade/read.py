@@ -1,7 +1,6 @@
-from config import NOTION_TRADE_DB_ID
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 
-def read_trade_db():
+def read_trade_db(NOTION_TRADE_DB_ID):
 
     response = notion.databases.query(
         database_id=NOTION_TRADE_DB_ID
