@@ -34,6 +34,6 @@ def update_KRX_GOLD_INFO_DB(page, gold_info):
   } 
     
   notion.pages.update(
-      page_id=NOTION_KRX_GOLD_INFO_DB_ID,
+      page_id=page["id"],
       properties=gold_info_mod
   )
