@@ -5,7 +5,7 @@ from notion.rich_text import rich_text
 from utils.logger import logging
 from config import NOTION_KRX_GOLD_INFO_DB_ID
 
-def update_KRX_GOLD_INFO_DB(gold_info):
+def update_KRX_GOLD_INFO_DB(page, gold_info):
 
   price = gold_info["price"]
   change = gold_info["change"]
