@@ -10,34 +10,8 @@ from gold.main import gold_main
 #domestic_stock_trade_main(NOTION_TRADE_DB_ID)
 
 # 개발 진행 중
-#gold_main()
+gold_main()
 
-
-import requests
-
-url = "https://m.stock.naver.com/front-api/realTime/marketIndex/metals"
-
-headers = {
-    "User-Agent": "Mozilla/5.0",
-    "Accept": "application/json, text/plain, */*",
-    "Content-Type": "application/json",
-    "Origin": "https://m.stock.naver.com",
-    "Referer": "https://m.stock.naver.com/marketindex/metals/M04020000",
-}
-
-payload = {
-    "reutersCodes": ["M04020000"]
-}
-
-response = requests.post(
-    url,
-    headers=headers,
-    json=payload,
-    timeout=10
-)
-
-print(response.status_code)
-print(response.text)
 
 """
 # 프로젝트의 시작점.
