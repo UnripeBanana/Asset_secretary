@@ -1,4 +1,4 @@
-from config import NOTION_PRICE_DB_ID
+from config import NOTION_PRICE_DB_ID, NOTION_TRADE_DB_ID
 from notion.get_all_pages import get_all_pages
 
 from domestic_stock.main import domestic_stock_main
