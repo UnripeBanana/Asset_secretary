@@ -4,6 +4,12 @@ from notion.client import notion # notion : 로그인 된 앱에 접근할 수 �
 from notion.rich_text import rich_text
 from utils.logger import logging
 
+"""
+  "price": int(gold["closePrice"].replace(",", "")),           # 현재가
+  "change": int(gold["fluctuations"].replace(",", "")),        # 전일대비
+  "rate": float(gold["fluctuationsRatio"]),                    # 등락률
+"""
+
 def update_KRX_GOLD_INFO_DB(stock_info):
 
     change = stock_info["change"]
