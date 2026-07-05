@@ -3,10 +3,14 @@ from notion.get_all_pages import get_all_pages
 
 from domestic_stock.main import domestic_stock_main
 from domestic_stock_trade.main import domestic_stock_trade_main
+from domestic_gold.main import domestic_gold_main
 
-
-#domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
+# 초기 개발 완료
+domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
 domestic_stock_trade_main(NOTION_TRADE_DB_ID)
+
+# 개발 진행 중
+domestic_gold_main()
 
 """
 # 프로젝트의 시작점.
