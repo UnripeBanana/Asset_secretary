@@ -3,7 +3,7 @@ from data.domestic_gold import get_gold_price
 
 def gold_main (pages):
   for page in pages:
-    gold_info = get_gold_price(page)
+    gold_info = get_gold_price()
   
     update_KRX_GOLD_INFO_DB(page, gold_info)
 
