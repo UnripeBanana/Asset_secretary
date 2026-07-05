@@ -10,7 +10,7 @@ from gold.main import gold_main
 #domestic_stock_trade_main(NOTION_TRADE_DB_ID)
 
 # 개발 진행 중
-gold_main()
+gold_main(get_all_pages(NOTION_PRICE_DB_ID))
 
 
 """
