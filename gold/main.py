@@ -1,4 +1,4 @@
-from domestic_gold.update import update_KRX_GOLD_INFO_DB
+from gold.update import update_KRX_GOLD_INFO_DB
 from data.domestic_gold import get_gold_price
 
 def gold_main ():
