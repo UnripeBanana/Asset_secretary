@@ -5,7 +5,7 @@ from domestic_stock.main import domestic_stock_main
 from domestic_stock_trade.main import domestic_stock_trade_main
 
 
-domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
+#domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
 domestic_stock_trade_main(get_all_pages(NOTION_TRADE_DB_ID))
 
 """
