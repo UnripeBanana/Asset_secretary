@@ -1,4 +1,12 @@
 # 금 시세만 가져온다.
 
-from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
+import requests            # 네이버 증권에서 데이터 받아오기
 
+url = "https://m.stock.naver.com/front-api/realTime/marketIndex/metals"
+
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
+
+response = requests.get(url, headers=headers)
+response.raise_for_status()
