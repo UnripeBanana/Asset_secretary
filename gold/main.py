@@ -2,11 +2,11 @@ from domestic_gold.update import update_KRX_GOLD_INFO_DB
 from data.domestic_gold import get_gold_price
 
 def gold_main ():
-  stock_info = {
+  gold_info = {
       get_gold_price()
   }
 
-  update_KRX_GOLD_INFO_DB(stock_info)
+  update_KRX_GOLD_INFO_DB(gold_info)
 
 """
   "price": int(gold["closePrice"].replace(",", "")),           # 현재가
