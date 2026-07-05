@@ -4,23 +4,26 @@ import requests            # 네이버 증권에서 데이터 받아오기
 
 def get_gold_price():
 
+    url = "https://m.stock.naver.com/front-api/realTime/marketIndex/metals"
+    
     headers = {
-        "User-Agent": "Mozilla/5.0"
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Origin": "https://m.stock.naver.com",
+        "Referer": "https://m.stock.naver.com/marketindex/metals/M04020000",
     }
-
-    url = f"https://m.stock.naver.com/front-api/realTime/marketIndex/metals/M04020000"
-
-    gold = requests.get(
+    
+    payload = {
+        "reutersCodes": ["M04020000"]
+    }
+    
+    response = requests.post(
         url,
         headers=headers,
-        timeout=10 # 최대 10초까지만 기다리겠다는 의미.
-    ).json()
-
-    
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()
-
-    
+        json=payload,
+        timeout=10
+    )
     
     gold = response.json()["result"]["metals"]["M04020000"]
 
