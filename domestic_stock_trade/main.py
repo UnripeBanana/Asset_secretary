@@ -1,5 +1,6 @@
 from config import NOTION_TRADE_DB_ID
 from domestic_stock_trade.read import read_trade_db
+from domestic_stock_trade.update import update_trade_page
 from trade.fifo import group_by_ticker, process_fifo
 
 trades = read_trade_db(NOTION_TRADE_DB_ID)
@@ -9,24 +10,6 @@ groups = group_by_ticker(trades)
 results = process_fifo(groups)
 
 for ticker, result in results.items():
-
-
-    ################
-
-from notion_updater import update_trade_page
-from stock_updater import update_stock_prices
-
-# --------------------------
-# 거래내역 FIFO 계산
-# --------------------------
-
-
-
-
-
-
-    print(f"\n===== {ticker} =====")
-
     # 잔량 업데이트
     for page_id, qty in result["remaining"].items():
         update_trade_page(
@@ -41,14 +24,3 @@ from stock_updater import update_stock_prices
             profit=profit
         )
 
-    print(f"{ticker} 거래내역 업데이트 완료")
-
-# --------------------------
-# 현재가 업데이트
-# --------------------------
-
-print("\n현재가 업데이트 시작...\n")
-
-update_stock_prices()
-
-print("\n모든 업데이트 완료!")
