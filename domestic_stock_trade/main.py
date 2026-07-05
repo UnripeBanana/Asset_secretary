@@ -2,10 +2,16 @@ from config import NOTION_TRADE_DB_ID
 from domestic_stock_trade.read import read_trade_db
 from trade.fifo import group_by_ticker, process_fifo
 
-read_trade_db(NOTION_TRADE_DB_ID)
+trades = read_trade_db(NOTION_TRADE_DB_ID)
+trades.sort(key=lambda x: x["date"])
+
+groups = group_by_ticker(trades)
+results = process_fifo(groups)
+
+for ticker, result in results.items():
 
 
-
+    ################
 
 from notion_updater import update_trade_page
 from stock_updater import update_stock_prices
@@ -14,13 +20,10 @@ from stock_updater import update_stock_prices
 # 거래내역 FIFO 계산
 # --------------------------
 
-trades = read_trade_db()
-trades.sort(key=lambda x: x["date"])
 
-groups = group_by_ticker(trades)
-results = process_fifo(groups)
 
-for ticker, result in results.items():
+
+
 
     print(f"\n===== {ticker} =====")
 
