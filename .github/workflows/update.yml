@@ -30,6 +30,7 @@ jobs:
           NOTION_KRX_GOLD_INFO_DB_ID: ${{ secrets.NOTION_KRX_GOLD_INFO_DB_ID }}
           NOTION_KRX_GOLD_POSSESSION_DB_ID: ${{ secrets.NOTION_KRX_GOLD_POSSESSION_DB_ID }}
           NOTION_KRX_GOLD_TRADE_DB_ID: ${{ secrets.NOTION_KRX_GOLD_TRADE_DB_ID }}
+          NOTION_DOMESTIC_BOND_ETF_DB_ID: ${{ secrets.NOTION_DOMESTIC_BOND_ETF_DB_ID }}
       - name: Commit price history
         run: |
           git config user.name "github-actions[bot]"
