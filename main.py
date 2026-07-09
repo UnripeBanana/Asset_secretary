@@ -7,12 +7,12 @@ from gold.main import gold_main
 from gold_trade.main import gold_trade_main
 
 # 초기 개발 완료
-#domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
+domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
 #domestic_stock_trade_main(NOTION_TRADE_DB_ID)
 #gold_main(get_all_pages(NOTION_KRX_GOLD_INFO_DB_ID))
 
 # 개발 진행 중
-gold_trade_main(NOTION_KRX_GOLD_TRADE_DB_ID)
+#gold_trade_main(NOTION_KRX_GOLD_TRADE_DB_ID)
 
 
 """
