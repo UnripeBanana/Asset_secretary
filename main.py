@@ -13,7 +13,7 @@ from gold_trade.main import gold_trade_main
 
 # 개발 진행 중
 #gold_trade_main(NOTION_KRX_GOLD_TRADE_DB_ID)
-#
+domestic_bond_etf_DB_main()
 
 """
 # 프로젝트의 시작점.
